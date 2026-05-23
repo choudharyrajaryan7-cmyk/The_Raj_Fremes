@@ -326,6 +326,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
+  /* Add this new rule */
+.work-thumb.insta-thumb {
+  height: auto;          /* let instagram control its own height */
+  min-height: 480px;     /* fallback minimum */
+  overflow: hidden;
+}
   .work-card {
     background: var(--bg2);
     border: 1px solid var(--border);
@@ -721,13 +727,10 @@
   <div class="work-grid" style="margin-top:2rem;">
     <div class="work-card featured" data-type="video">
       <div class="work-thumb">
-        <div class="work-thumb-bg"></div>
-        <span class="work-type-badge">Video Edit</span>
-        <div class="work-play-btn">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-      </div>
-      <div class="work-info">
+  <video width="100%" height="100%" controls style="object-fit:cover;">
+    <source src="your-video.mp4" type="video/mp4">
+  </video>
+</div>
         <div class="work-title">Brand Launch Reel — [Client Name]</div>
         <div class="work-meta"><span>Product launch</span><span>·</span><span>60 sec</span><span>·</span><span>2024</span></div>
       </div>
